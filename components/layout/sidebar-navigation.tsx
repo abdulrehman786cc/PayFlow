@@ -67,12 +67,17 @@ export default function SidebarNavigation({ activeSection, onSectionChange }: Si
     >
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-slate-700">
-        {!collapsed && (
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <Bot className="h-5 w-5 text-white" />
+         {!collapsed && (
+          <div className="flex flex-col gap-0.5">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <Bot className="h-5 w-5 text-white" />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-semibold">PayFlow</span>
+                <span className="text-xs text-slate-400">Powered by ClickChain.ai</span>
+              </div>
             </div>
-            <span className="font-semibold">PayFlow</span>
           </div>
         )}
         <Button
